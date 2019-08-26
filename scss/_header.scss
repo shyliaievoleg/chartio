@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    background: $body-bg;
+}
+
+.header-top {
+    width: 100%;
+    padding: 32px 0;
+    border-bottom: 1px solid $gray-lighter;
+
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.header-actions {
+    margin: 0 0 0 auto;
+}
+
+.header-actions {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header-bottom {
+    padding: 32px 0 37px;
+}

@@ -1,0 +1,141 @@
+.nav {
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+.subnav {
+    background: $white;
+    padding: 20px 26px 10px;
+    width: 200px;
+    position: absolute;
+    opacity: 0;
+    left: -9999em;
+    top: 100px;
+    list-style: none;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+
+    &__item {
+        margin: 0 0 10px;
+    }
+
+}
+
+.nav--primary {
+    margin: 0 0 0 40px;
+    z-index: 10;
+
+    .nav__item {
+
+        &--dropdown {
+
+            .nav__link{
+                padding-right: 10px;
+
+                &:after {
+                    content: "\f107";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    line-height: 1em;
+                    position: relative;
+                    top: 2px;
+                    margin: 0 0 0 7px;
+
+                }
+            }
+        }
+    }
+
+    .nav__link {
+        padding: 10px 26px;
+        font-weight: 600;
+    }
+}
+
+.nav__item--dropdown:hover {
+
+    .subnav {
+        opacity: 1;
+        left: 0;
+        top: 26px;
+    }
+}
+
+.nav--secondary {
+
+    .nav__link {
+        padding: 0 22px 0 0;
+
+        &:hover {
+            font-weight: 600;
+            color: $black;
+        }
+    }
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 22px;
+    margin: 0 0 0 auto;
+}
+
+.nav__holder--opened {
+    background: url('../images/mobile-bg.png') no-repeat center top/cover;
+    width: 100%;
+    top: 43px;
+    margin: 0;
+    padding: 30px 0;
+    opacity: 1 !important;
+    visibility: visible !important;
+    left: 0;
+    display: block !important;
+    position: absolute;
+    z-index: 10;
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        color: $white;
+        display: block;
+    }
+
+    .subnav {
+        background: none;
+        padding: 5px 46px;
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        left: 0;
+        top: 0 !important;
+        list-style: none;
+        box-shadow: none;
+        z-index: 10;
+        display: none;
+
+        &__link {
+            color: $white;
+        }
+
+        &--opened {
+            display: block;
+        }
+    }
+
+    & .nav--primary {
+        margin: 0;
+    }
+}

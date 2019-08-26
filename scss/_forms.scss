@@ -1,0 +1,43 @@
+.email-form {
+    display: flex;
+    flex-flow: row wrap;
+    height: 56px;
+    margin: 0 0 0 24px;
+
+    &__input {
+        background: $white;
+        width: 55%;
+        border: none;
+        padding: 0 10px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    &__submit {
+        width: 45%;
+        height: 56px;
+        border-radius: 0 4px 4px 0;
+        padding: 0 25px;
+        font-size: 1.1rem;
+    }
+
+    &--sign-up {
+        background: $gray-lightest;
+        height: 38px;
+        border: 2px solid $btn-bg-secondary;
+        border-radius: $border-radius;
+
+        .email-form__input {
+            border-radius: 4px 0 0 4px;
+            background: $gray-lightest;
+            height: 34px;
+            width: 150px;
+        }
+
+        .email-form__submit {
+            width: auto;
+            border-radius: 4px 0 0 4px;
+            height: 34px;
+            padding: 0 13px 5px;
+        }
+    }
+}

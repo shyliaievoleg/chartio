@@ -1,0 +1,58 @@
+// Base Colors
+$black:                       #000;
+$gray-darkest:                #4C4C4C;
+$gray-darker:                 #505050;
+$gray-dark:                   #646464;
+$gray:                        #ccc;
+$gray-light:                  #dedede;
+$gray-lighter:                #ebebeb;
+$gray-lightest:               #F5F5F5;
+$white:                       #fff;
+
+$color-main:                  #3C97DA;
+$color-secondary1:            #369439;
+$color-secondary2:            #DD9239;
+
+$color-success:               hsl(120, 39%, 54%);
+$color-danger:                #ac2200;
+$color-warning:               hsl(35, 84%, 62%);
+
+// Colors
+$text-color:                  #555;
+$text-color--muted:           $gray;
+$body-bg:                     $white;
+
+$link-color:                  $black;
+$link-color--hover:           $color-main;
+$link-color-secondary--hover: $color-danger;
+
+$border-color:                $gray-light;
+$border-radius:               4px;
+
+$btn-bg-primary:              $white;
+$btn-bg-primary--hover:       $white;
+$btn-bg-secondary:            $color-main;
+$btn-bg-secondary--hover:     $color-main;
+
+$btn-color-primary:           $gray-darker;
+$btn-color-primary--hover:    $gray-darker;
+$btn-color-secondary:         $white;
+$btn-color-secondary--hover:  $white;
+
+$tabs-color:                  $white;
+$tabs-color--active:          $btn-color-primary;
+
+// Base Fonts
+$font-size:                   15px;
+$font-size--h1:               50px;
+$font-size--h2:               42px;
+$font-size--h3:               28px;
+$font-size--h4:               21px;
+
+$line-height:                 1.6em;
+$line-height-h:               1.2em;
+
+$font-family:                 'Open Sans', Arial, Helvetica, sans-serif;
+$font-family--serif:          'Roboto Slab', 'Georgia', 'Times New Roman', 'Times', serif;
+$font-family--monospace:      SFMono-Regular, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+$font-family--headings:       $font-family;
