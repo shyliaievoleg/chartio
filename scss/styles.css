@@ -3,8 +3,7 @@ html {
   scroll-behavior: smooth; }
 
 * {
-  box-sizing: border-box;
-  position: relative; }
+  box-sizing: border-box; }
   *:before, *:after {
     box-sizing: border-box; }
 
@@ -161,11 +160,15 @@ body {
   width: 19%; }
 
 .logo {
-  margin: 5px 0 0; }
+  margin: 2px 0 0 -11px;
+  display: flex; }
+  .logo img {
+    width: 160px; }
   .logo--footer {
-    width: 25%; }
+    width: 25%;
+    margin-top: -8px; }
     .logo--footer img {
-      width: 100px; }
+      width: 121px; }
 
 .header {
   width: 100%;
@@ -173,20 +176,20 @@ body {
 
 .header-top {
   width: 100%;
-  padding: 32px 0;
-  border-bottom: 1px solid #ebebeb; }
+  padding: 0;
+  height: 101px;
+  border-bottom: 1px solid #ebebeb;
+  display: flex; }
   .header-top .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center; }
-
-.header-actions {
-  margin: 0 0 0 auto; }
+    justify-content: flex-start; }
 
 .header-actions {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  align-items: center;
+  margin-left: auto; }
 
 .header-bottom {
   padding: 32px 0 37px; }
@@ -221,7 +224,8 @@ body {
 .what-we-do__image {
   width: 60%;
   padding: 50px 0 0 36px;
-  background: #E5DAF9; }
+  background: #E5DAF9;
+  position: relative; }
 
 .what-we-do__image-element {
   width: 100%;
@@ -393,7 +397,8 @@ body {
 .video {
   background: url("../images/img-video-with-frame.png") no-repeat center center/cover;
   padding: 0 0 56%;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .video__play-btn {
   background: url("../images/play-btn.svg") no-repeat center 70%;
@@ -405,58 +410,74 @@ body {
   left: 0;
   top: 0; }
 
-.nav__list {
-  list-style: none;
+.nav {
   display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  padding: 0; }
-
-.subnav {
-  background: #fff;
-  padding: 20px 26px 10px;
-  width: 200px;
-  position: absolute;
-  opacity: 0;
-  left: -9999em;
-  top: 100px;
-  list-style: none;
-  box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.05);
+  margin: 0 0 0 28px;
   z-index: 10; }
-  .subnav__item {
-    margin: 0 0 10px; }
-
-.nav--primary {
-  margin: 0 0 0 40px;
-  z-index: 10; }
-  .nav--primary .nav__item--dropdown .nav__link {
-    padding-right: 10px; }
-    .nav--primary .nav__item--dropdown .nav__link:after {
-      content: "\f107";
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: inherit;
-      display: inline-block;
-      font-size: 1.2rem;
-      line-height: 1em;
-      position: relative;
-      top: 2px;
-      margin: 0 0 0 7px; }
-  .nav--primary .nav__link {
+  .nav__holder {
+    display: flex; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0; }
+  .nav__item {
+    display: flex; }
+    .nav__item--dropdown .nav__link {
+      padding-right: 10px; }
+      .nav__item--dropdown .nav__link:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 1em;
+        position: relative;
+        top: 2px;
+        margin: 0 0 0 7px; }
+  .nav__link {
+    display: flex;
+    align-items: center;
     padding: 10px 26px;
     font-weight: 600; }
 
+.subnav {
+  background: #fff;
+  padding: 20px 26px;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  top: 100px;
+  list-style: none;
+  box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  height: 92px;
+  display: flex; }
+  .subnav__list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+    display: flex; }
+  .subnav__item {
+    margin: 0; }
+    .subnav__item:first-child .subnav__link {
+      padding-left: 0; }
+  .subnav__link {
+    padding: 15px 11px;
+    display: flex;
+    align-items: center; }
+
 .nav__item--dropdown:hover .subnav {
   opacity: 1;
-  left: 0;
-  top: 26px; }
-
-.nav--secondary .nav__link {
-  padding: 0 22px 0 0; }
-  .nav--secondary .nav__link:hover {
-    font-weight: 600;
-    color: #000; }
+  visibility: visible; }
 
 .nav__toggle {
   display: none;

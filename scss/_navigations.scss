@@ -1,4 +1,11 @@
 .nav {
+    display: flex;
+    margin: 0 0 0 28px;
+    z-index: 10;
+
+    &__holder {
+        display: flex;
+    }
 
     &__list {
         list-style: none;
@@ -7,37 +14,13 @@
         margin: 0;
         padding: 0;
     }
-}
-
-
-
-.subnav {
-    background: $white;
-    padding: 20px 26px 10px;
-    width: 200px;
-    position: absolute;
-    opacity: 0;
-    left: -9999em;
-    top: 100px;
-    list-style: none;
-    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.05);
-    z-index: 10;
 
     &__item {
-        margin: 0 0 10px;
-    }
-
-}
-
-.nav--primary {
-    margin: 0 0 0 40px;
-    z-index: 10;
-
-    .nav__item {
+        display: flex;
 
         &--dropdown {
 
-            .nav__link{
+            .nav__link {
                 padding-right: 10px;
 
                 &:after {
@@ -58,30 +41,65 @@
         }
     }
 
-    .nav__link {
+    &__link {
+        display: flex;
+        align-items: center;
         padding: 10px 26px;
         font-weight: 600;
     }
+}
+
+
+
+.subnav {
+    background: $white;
+    padding: 20px 26px;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: 100px;
+    list-style: none;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    height: 92px;
+    display: flex;
+
+    &__list {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        z-index: 10;
+        display: flex;
+    }
+
+    &__item {
+        margin: 0;
+
+        &:first-child {
+
+            .subnav__link {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        padding: 15px 11px;
+        display: flex;
+        align-items: center;
+    }
+
 }
 
 .nav__item--dropdown:hover {
 
     .subnav {
         opacity: 1;
-        left: 0;
-        top: 26px;
-    }
-}
-
-.nav--secondary {
-
-    .nav__link {
-        padding: 0 22px 0 0;
-
-        &:hover {
-            font-weight: 600;
-            color: $black;
-        }
+        visibility: visible;
     }
 }
 

@@ -5,24 +5,23 @@
 
 .header-top {
     width: 100%;
-    padding: 32px 0;
+    padding: 0;
+    height: 101px;
     border-bottom: 1px solid $gray-lighter;
+    display: flex;
 
     .container {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
-        align-items: center;
     }
-}
-
-.header-actions {
-    margin: 0 0 0 auto;
 }
 
 .header-actions {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
+    margin-left: auto;
 }
 
 .header-bottom {
