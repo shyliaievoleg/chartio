@@ -21,6 +21,7 @@ h1, h2, h3, h1 a, h2 a, h3 a, legend {
     font-family: $font-family--serif;
     line-height: $line-height;
     font-weight: normal;
+    color: $h-color;
 }
 
 h1 {
@@ -36,9 +37,14 @@ h2 {
 }
 
 h3 {
-    margin: 50px 0 27px;
+    margin: 0 0 27px;
     font-size: $font-size--h3;
     line-height: $line-height-h;
+    color: $black;
+
+    &:not(:first-child) {
+        margin-top: 46px;
+    }
 }
 
 h4 {
@@ -50,8 +56,12 @@ h4 {
 }
 
 p {
-    margin: 0 0 1em;
+    margin: 0;
     line-height: $line-height;
+
+    &:not(:last-child) {
+        margin: 0 0 1em;
+    }
 }
 
 a {
@@ -173,8 +183,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .cols2, .cols3, .cols4, .cols5 {

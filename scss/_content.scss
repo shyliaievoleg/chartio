@@ -1,7 +1,10 @@
 .welcome {
     width: 100%;
     background: #a673f7 url('../images/welcome-bg.svg') no-repeat center bottom/cover;
-    padding: 99px 0 60px;
+    padding: 100px 0 60px;
+    height: 453px;
+    display: flex;
+    align-items: flex-end;
 
     .container {
         text-align: center;
@@ -20,6 +23,9 @@
 
 .what-we-do {
     padding: 146px 0 30px;
+    position: relative;
+    min-height: 960px;
+    margin: 0 0 63px;
 
     .container {
         display: flex;
@@ -31,19 +37,24 @@
 
 .what-we-do__description {
     width: 30%;
-    padding: 5px 0 0;
+    padding: 56px 0 0;
 }
 
 .what-we-do__image {
-    width: 60%;
     padding: 50px 0 0 36px;
     background: #E5DAF9;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 254px;
+    left: 45.6%;
+    bottom: 37px;
 }
 
 .what-we-do__image-element {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 
 .what-we-do__image-caption {
@@ -74,7 +85,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 56px;
+    margin: 0 0 50px;
 }
 
 .content-item__image {
@@ -82,8 +93,28 @@
 }
 
 .content-item__image-element {
-    width: 100%;
+    max-width: 100%;
     display: block;
+
+    &--migration,
+    &--governance,
+    &--insights {
+        width: auto;
+        max-width: none;
+        position: relative;
+    }
+
+    &--migration {
+        left: -93px;
+    }
+
+    &--governance {
+        right: -7px;
+    }
+
+    &--insights {
+        left: -68px;
+    }
 }
 
 .content-item__text {
@@ -167,9 +198,8 @@
 }
 
 .testimonial-item__link {
-    display: block;
     font-weight: 600;
-    margin: 0 0 12px;
+    margin: 0;
 }
 
 .content-box {
